@@ -97,13 +97,13 @@ return {
       {
         "<leader>rf",
         function()
-          local cwd = vim.fn.getcwd()
-          vim.notify(cwd)
+          --  local cwd = vim.fn.getcwd()
+          --  vim.notify(cwd)
           local fp = vim.fn.expand("%:h")
-          vim.notify(fp)
-          local p = fp:gsub("^" .. cwd, "")
-          vim.notify(p)
-          telescope.find_files({ search_dirs = { p } })
+          --   vim.notify(fp)
+          --  local p = fp:gsub("^" .. cwd, "")
+          --  vim.notify(p)
+          telescope.find_files({ search_dirs = { fp } })
         end,
         desc = "Browse files in current file directory",
       },
