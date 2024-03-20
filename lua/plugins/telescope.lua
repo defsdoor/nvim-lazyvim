@@ -2,6 +2,15 @@ local telescope = require("telescope.builtin")
 return {
   {
     "nvim-telescope/telescope.nvim",
+    config = function()
+      require("telescope").setup({
+        pickers = {
+          colorscheme = {
+            enable_preview = true,
+          },
+        },
+      })
+    end,
     keys = {
       {
         "<leader>rc",
